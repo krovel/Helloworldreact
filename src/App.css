@@ -12,6 +12,12 @@ h1 {
   font-size: xx-large;
 }
 
+img {
+  display: block;
+  margin: 0 auto;
+  width: 25%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
