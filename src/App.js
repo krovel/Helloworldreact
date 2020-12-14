@@ -6,21 +6,29 @@ class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            title: 'Hello from BridgeLabz'
+            userName: ''
         }
     }
     onClick=($event) => {
         console.log("save button is clicked:",$event);
         window.open(this.url,"_blank");
-    };
-    render() {
-        return ( 
-        <div>
-            <h1>{this.state.title}</h1>
-            <img src={logo} onClick={this.onClick} 
-            alt="The Bridgelabz Logo"/>
-            </div>
-        );
+    };onNameChange =(event) => {
+        console.log("Value is ", event.target.value); 
+        this.setState({userName: event.target.value});        
+      };
+      render() {
+          return ( 
+                  <div>
+                      <div>
+                          <h1>Hello {this.state.userName} from BridgeLabz</h1>
+                          <img src={logo} onClick={this.onClick}
+                          alt="The Bridgelabz Logo"/>
+                      </div>
+                      <div className="text-box">
+                          <input onChange={this.onNameChange}/>
+                      </div>
+                  </div>
+                  );
     }       
 }
 
