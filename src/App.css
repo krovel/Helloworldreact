@@ -24,6 +24,13 @@ img {
   justify-content: center;
 }
 
+.error-output {
+  margin-left: 10px;
+  font-size: 12px;
+  font-style: italic;
+  color: red;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
